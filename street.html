@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Street Food</title>
+    <link rel="stylesheet" href="s.css">
+</head>
+<body>
+    <header>
+        <h1>Street Food</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showSection('hamburgerek')">Hamburgerek</a>
+                <div class="dropdown-content">
+                    <a href="#" onclick="showSection('classic-hamburger')"><img src="photo19.png" alt="Classic Hamburger">Classic Hamburger</a>
+                    <a href="#" onclick="showSection('cheeseburger')"><img src="Thailand-Cheeseburger-1.png" alt="Cheeseburger">Cheeseburger</a>
+                    <a href="#" onclick="showSection('bacon-burger')"><img src="bacon_burger.jpg" alt="Bacon Burger">Bacon Burger</a>
+                    <a href="#" onclick="showSection('double-cheeseburger')"><img src="double_cheeseburger.jpg" alt="Double Cheeseburger">Double Cheeseburger</a>
+                    <a href="#" onclick="showSection('veggie-burger')"><img src="veggie_burger.jpg" alt="Veggie Burger">Veggie Burger</a>
+                </div>
+            </li>
+            <li><a href="#" onclick="showSection('italok')">Italok</a>
+                <div class="dropdown-content">
+                    <a href="#" onclick="showSection('cola')"><img src="cola.jpg" alt="Kóla">Kóla</a>
+                    <a href="#" onclick="showSection('sprite')"><img src="sprite.jpg" alt="Sprite">Sprite</a>
+                    <a href="#" onclick="showSection('fanta')"><img src="fanta.jpg" alt="Fanta">Fanta</a>
+                    <a href="#" onclick="showSection('water')"><img src="water.jpg" alt="Víz">Víz</a>
+                    <a href="#" onclick="showSection('orange-juice')"><img src="orange_juice.jpg" alt="Narancslé">Narancslé</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <section id="hamburgerek" class="content-section">
+        <h2>Hamburgerek</h2>
+        <p>Válassz a finom hamburgereink közül!</p>
+    </section>
+
+    <section id="classic-hamburger" class="content-section">
+        <h2>Classic Hamburger</h2>
+        <p>A klasszikus hamburger ínycsiklandó marhahús pogácsával, ropogós salátával, paradicsommal és ízletes szósszal.</p>
+        <img src="hambibambi.png" alt="Classic Hamburger">
+    </section>
+
+    <section id="cheeseburger" class="content-section">
+        <h2>Cheeseburger</h2>
+        <p>A sajtburger finom sajt réteggel, lédús marhahús pogácsával és friss zöldségekkel.</p>
+        <img src="bambaburgu.png" alt="Cheeseburger">
+    </section>
+
+    <section id="bacon-burger" class="content-section">
+        <h2>Bacon Burger</h2>
+        <p>A baconburger szaftos marhahús pogácsával, ropogós baconnel és friss zöldségekkel.</p>
+        <img src="bacon_burger.jpg" alt="Bacon Burger">
+    </section>
+
+    <section id="double-cheeseburger" class="content-section">
+        <h2>Double Cheeseburger</h2>
+        <p>A dupla sajtburger extra adag sajttal és marhahússal, friss zöldségekkel.</p>
+        <img src="double_cheeseburger.jpg" alt="Double Cheeseburger">
+    </section>
+
+    <section id="veggie-burger" class="content-section">
+        <h2>Veggie Burger</h2>
+        <p>A vegetáriánus burger ízletes zöldségpogácsával és friss zöldségekkel.</p>
+        <img src="veggie_burger.jpg" alt="Veggie Burger">
+    </section>
+
+    <section id="italok" class="content-section">
+        <h2>Italok</h2>
+    </section>
+
+    <section id="cola" class="content-section">
+        <h2>Kóla</h2>
+        <p>Frissítő kóla.</p>
+        <img src="cola.jpg" alt="Kóla">
+        <video width="1920" height="1080" controls> 
+        <source src="jo.mp4" type="video/mp4">
+    </section>
+
+    <section id="sprite" class="content-section">
+        <h2>Sprite</h2>
+        <p>Hűsítő Sprite.</p>
+        <img src="sprite.jpg" alt="Sprite">
+    </section>
+
+    <section id="fanta" class="content-section">
+        <h2>Fanta</h2>
+        <p>Ízletes Fanta.</p>
+        <img src="fanta.jpg" alt="Fanta">
+    </section>
+
+    <section id="water" class="content-section">
+        <h2>Víz</h2>
+        <p>Szénsavmentes ásványvíz.</p>
+        <img src="water.jpg" alt="Víz">
+    </section>
+
+    <section id="orange-juice" class="content-section">
+        <h2>Narancslé</h2>
+        <p>Frissen facsart narancslé.</p>
+        <img src="orange_juice.jpg" alt="Narancslé">
+    </section>
+
+    <script>
+        function showSection(sectionId) {
+            var sections = document.getElementsByClassName('content-section');
+            for (var i = 0; i < sections.length; i++) {
+                sections[i].style.display = 'none';
+            }
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
+        // Alapértelmezett megjelenítés
+        showSection('hamburgerek');
+    </script>
+</body>
+</html>
+
